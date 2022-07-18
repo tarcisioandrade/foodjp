@@ -1,116 +1,294 @@
-.container {
-  padding: 0 2rem;
+.intro {
+  padding-top: 40px;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.introTitle {
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: 600;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.introText {
+  font-family: var(--font-secondary);
+  margin-top: 20px;
+  line-height: 1.7;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
+.introButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: background ease 0.3s;
+  text-align: center;
+  font-family: var(--font-secondary);
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.introButton:hover {
+  background-color: #cc1d2c;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.introImage {
+  display: none;
 }
 
-.title,
-.description {
+.imageDesktop {
+  display: none;
+}
+
+.introSecond {
+  margin-top: 40px;
+}
+
+.introSTitle {
+  font-size: 24px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin-top: 40px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.introSText {
+  font-family: var(--font-secondary);
+  margin: 20px 0;
+  line-height: 1.7;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.introSLink {
+  color: var(--red);
+  text-align: center;
+  font-family: var(--font-secondary);
+  display: block;
+  margin: 0 auto;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.populCards {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  margin-top: 90px;
 }
 
-.grid {
+.popul {
+  margin-top: 60px;
+}
+
+.populTitle {
+  text-align: center;
+  font-size: 24px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.comments {
+  margin: 90px 0;
+}
+
+.commentsCards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.commentsTitle {
+  text-align: center;
+  font-size: 24px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin: 40px 0;
+}
+
+.locationTitle {
+  text-align: center;
+  font-size: 24px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin: 40px 0;
+}
+
+.locationMap {
+  display: none;
+}
+
+.locationInput {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--black);
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  margin-top: 30px;
+  font-family: var(--font-secondary);
+  overflow: hidden;
+  padding-left: 15px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.locationInput input {
+  flex: 1;
+  border: none;
+  padding: 9px 0;
+  outline: none;
+  margin-left: 5px;
+  color: var(--black);
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.locationSearch {
+  background-color: var(--red);
+  padding: 8px 15px;
+  z-index: 2;
+  cursor: pointer;
+  transition: background ease 0.3s;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.locationSearch:hover {
+  background-color: #cc1d2c;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+@media screen and (min-width: 640px) {
+  .intro {
+    text-align: center;
+  }
+
+  .imageMobile {
+    display: none;
+  }
+
+  .imageDesktop {
+    display: block;
+  }
+
+  .introButton {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .populCards {
+    align-items: center;
+  }
+
+  .commentsCards {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .locationMap {
+    display: initial;
+  }
+
+  .locationMapMobile {
+    display: none;
+  }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media screen and (min-width: 768px) {
+  .intro {
+    text-align: left;
+  }
+
+  .introFirst {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .introContent {
+    flex: 1;
+  }
+
+  .introButton {
+    max-width: 100%;
+    margin-left: initial;
+    margin-right: initial;
+  }
+
+  .introImage {
+    display: flex;
+    flex: 1;
+  }
+
+  .introSecond {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .introSecondImage {
+    flex: 1;
+  }
+
+  .introSecondContent {
+    flex: 1;
+  }
+
+  .introSTitle {
+    text-align: initial;
+  }
+
+  .introSText {
+    line-height: 1.7;
+    text-align: initial;
+  }
+
+  .introSLink {
+    text-align: initial;
+    display: block;
+  }
+
+  .locationInput {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .introTitle,
+  .introSTitle,
+  .populTitle {
+    font-size: 48px;
+  }
+
+  .introText,
+  .introButton,
+  .introSText,
+  .introSLink,
+  .locationInput input {
+    font-size: 24px;
+  }
+
+  .populCards {
+    flex-direction: row;
+  }
+
+  .locationTitle,
+  .commentsTitle {
+    font-size: 48px;
+    text-align: left;
+  }
+
+  .locationInput {
+    max-width: 800px;
+  }
+
+  .locationSearch {
+    padding: 25px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .introImage span {
+    margin-left: auto !important;
   }
 }

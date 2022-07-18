@@ -1,0 +1,33 @@
+.cardapio {
+  padding-top: 90px;
+}
+
+.cardapioTitle {
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardapioItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  gap: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardapioItems {
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .cardapioTitle {
+    font-size: 48px;
+  }
+}

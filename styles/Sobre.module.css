@@ -1,0 +1,51 @@
+.sobre {
+  padding-top: 40px;
+}
+
+.sobreTitle {
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.sobreContent {
+  margin-top: 40px;
+}
+
+.sobreSubTitle {
+  font-size: 24px;
+  color: var(--red);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin: 20px 0
+}
+
+.sobreSubTitle::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: currentColor;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.sobreText {
+  font-family: var(--font-secondary);
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1024px){
+  .sobreSubTitle {
+    font-size: 48px;
+  }
+
+  .sobreSubTitle {
+    font-size: 38px;
+  }
+
+  .sobreText {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,122 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburgerIcon {
+  display: block;
+  margin-left: auto;
+  fill: var(--black);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: -200px;
+  top: 0;
+  height: 100vh;
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: var(--font-secondary);
+  background-color: #f3f3f3;
+  z-index: 51;
+  width: 200px;
+  transition: all ease 0.3s;
+}
+
+.dropdown.dropActive {
+  right: 0;
+}
+
+.menu {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  line-height: 40px;
+}
+
+.menu li a {
+  display: block;
+  padding: 8px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  margin-top: 15px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  background-color: transparent;
+  width: 120px;
+  padding: 10px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button a {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.button:hover a {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .hamburgerIcon {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 100px;
+  }
+
+  .dropdown {
+    position: initial;
+    padding: 0;
+    height: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    flex-direction: row;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu li a,
+  .button {
+    font-size: 24px;
+  }
+
+  .menu {
+    gap: 30px;
+  }
+}
