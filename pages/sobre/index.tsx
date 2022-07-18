@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import styles from "../../styles/Sobre.module.css";
 
@@ -6,6 +7,9 @@ const Sobre = () => {
     <Layout>
       <>
         <div className={styles.sobre}>
+          <Head>
+            <title>FoodJP | Sobre</title>
+          </Head>
           <h1 className={styles.sobreTitle}>Sobre Nós</h1>
 
           <div className={styles.sobreContent}>

@@ -17,6 +17,7 @@ import Comment from "../components/Comment/Comment";
 import { MapPin, MagnifyingGlass } from "phosphor-react";
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   const [sizeWindow, setSizeWindow] = useState<number>(0);
@@ -35,6 +36,9 @@ const Home: NextPage = () => {
     <Layout>
       <>
         <section className={styles.intro}>
+          <Head>
+            <title>FoodJP</title>
+          </Head>
           <div className={styles.introFirst}>
             <div className={styles.introContent}>
               <h1 className={styles.introTitle}>Comida Oriental</h1>

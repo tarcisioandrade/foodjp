@@ -4,12 +4,16 @@ import RamenFrango from "../../public/ramen-frango.png";
 import RamenApimentado from "../../public/ramen-apimentado.png";
 import RamenTradicional from "../../public/ramen-tradicional.png";
 import Layout from "../../components/Layout/Layout";
+import Head from "next/head";
 
 const Cardapio = () => {
   return (
     <Layout>
       <>
         <section className={styles.cardapio}>
+          <Head>
+            <title>FoodJP | Cardapio</title>
+          </Head>
           <h1 className={styles.cardapioTitle}>Cárdapio</h1>
           <div className={styles.cardapioItems}>
             <Card

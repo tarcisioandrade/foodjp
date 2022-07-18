@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Login.module.css";
 
 const Login = () => {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>FoodJP | Login</title>
+      </Head>
       <form className={styles.form}>
         <h1 className="logo">
           Food<span className="logoJp">JP</span>
